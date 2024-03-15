@@ -5,7 +5,7 @@
 # Contributor: Jakub Schmidtke <sjakub@gmail.com>
 
 _pkgname=firefox
-pkgname=firefox-globalmenu
+pkgname=firefox-globalmenu-m1k
 pkgver=123.0.1
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org, with appmenu patch."
