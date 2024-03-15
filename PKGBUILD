@@ -1,4 +1,4 @@
-# Maintainer: detiam <dehe_tian@outlook.com>
+# Maintainer: Michele Palazzi <sysdadmin@m1k.cloud>
 # Contributor: Nikita Tarasov <nikatar@disroot.org>
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 # Contributor: Ionut Biru <ibiru@archlinux.org>
@@ -6,7 +6,7 @@
 
 _pkgname=firefox
 pkgname=firefox-globalmenu
-pkgver=123.0
+pkgver=123.0.1
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org, with appmenu patch."
 url="https://www.mozilla.org/$_pkgname/"
@@ -69,13 +69,13 @@ validpgpkeys=(
   # Mozilla Software Releases <release@mozilla.com>
   # https://blog.mozilla.org/security/2023/05/11/updated-gpg-key-for-signing-firefox-releases/
   '14F26682D0916CDD81E37B6D61B7B526D98F0353')
-sha256sums=('9e885abdaddb14cd4f313c1575282fec6af5901f445e9744fe24e2ea837d4cb7'
+sha256sums=('d5dcb955b65e0f164a90cac0760724486e36e896221b98f244801dfd045d741c'
             'SKIP'
             'ed84a17fa4a17faa70a0528556dbafeeb6ee59697451325881cb064b0ee8afec'
             '74440d292e76426ac5cba9058a6f86763c37a9aa61b7afc47771140f1f53870b'
             'e08d0bc5b7e562f5de6998060e993eddada96d93105384960207f7bdf2e1ed6e'
             'b07223e5928a5a0d4cb53e5c1a80cd93289f2f69a622c08e76d41a2434277ecc')
-b2sums=('6c9bfce3cd9c5ab3aa929ea20b50ef5e2c90d161a472dd374dfa20b7902fe1aec5504b94576a3e746945e30c6e21f189c17ce67328e6160df40e885805fc874c'
+b2sums=('837f2edf2dcf51f19d8cad1f8234723236f318defa1196885b019e46878b377a24a83093ccbf8ef43e7ea94ddd1520f2918bcea520c59379453d40251ff972d6'
         'SKIP'
         'bbc69752492649f288e0ceef6ce4a1703030cc98abd2442b7ebfba2be786eea643f594af5dc237a6e3c04fd0c8b147f529fd9e790f04c64b9f10abb3c826827f'
         '4b3837b398c5391ac036a59c8df51f9ad170b2d8c3d5d2011a63bacd9e24a81de4505ddf7ef722a0a6920b02bb8dbc2bb7b6f151e2aa7843baccec0572cc56c0'
