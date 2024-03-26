@@ -95,7 +95,7 @@ _google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
 _mozilla_api_key=e05d56db0a694edc8b5aaebda3f2db6a
 
 prepare() {
-  mkdir mozbuild
+  mkdir -p mozbuild
   cd $_pkgname-$pkgver
 
   for patch in "${source[@]}"; do
