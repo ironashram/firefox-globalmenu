@@ -6,7 +6,7 @@
 
 _pkgname=firefox
 pkgname=firefox-globalmenu-m1k
-pkgver=124.0.1
+pkgver=124.0.2
 pkgrel=1
 pkgdesc="Standalone web browser from mozilla.org, with appmenu patch."
 url="https://www.mozilla.org/$_pkgname/"
@@ -69,13 +69,13 @@ validpgpkeys=(
   # Mozilla Software Releases <release@mozilla.com>
   # https://blog.mozilla.org/security/2023/05/11/updated-gpg-key-for-signing-firefox-releases/
   '14F26682D0916CDD81E37B6D61B7B526D98F0353')
-sha256sums=('ddac16aea855e057ff6be3c143f7155cc20f452e1f45eb6288ff27e9346ab843'
+sha256sums=('a6526d3540e19c8875cb7364e4490436c189478d375c4cb5216b0414e4b2d91c'
             'SKIP'
             'ed84a17fa4a17faa70a0528556dbafeeb6ee59697451325881cb064b0ee8afec'
             '74440d292e76426ac5cba9058a6f86763c37a9aa61b7afc47771140f1f53870b'
             'e08d0bc5b7e562f5de6998060e993eddada96d93105384960207f7bdf2e1ed6e'
             'b07223e5928a5a0d4cb53e5c1a80cd93289f2f69a622c08e76d41a2434277ecc')
-b2sums=('b986833fbf28ebcb5588a68367054ca7a2f51f69685349ba65d25e118c90ded55c6e626842bbda8f00717ee55aa784c808e8f09855de423234a592ad23d9e9bf'
+b2sums=('eaa35c3967514cb9f9ca48e32414bdecead3147a3d5ba8e9648be32f04b5d9e209ce71e02029851e1654c66d5cefd9a7b1a2a0fa68558a856c2ae3b1112d04d6'
         'SKIP'
         'bbc69752492649f288e0ceef6ce4a1703030cc98abd2442b7ebfba2be786eea643f594af5dc237a6e3c04fd0c8b147f529fd9e790f04c64b9f10abb3c826827f'
         '4b3837b398c5391ac036a59c8df51f9ad170b2d8c3d5d2011a63bacd9e24a81de4505ddf7ef722a0a6920b02bb8dbc2bb7b6f151e2aa7843baccec0572cc56c0'
