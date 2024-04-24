@@ -5121,34 +5121,21 @@
  ]
  
  if defined('NS_PRINTING'):
---- a/xpfe/appshell/AppWindow.cpp
-+++ b/xpfe/appshell/AppWindow.cpp
-@@ -80,7 +80,7 @@
- 
- #include "mozilla/dom/DocumentL10n.h"
- 
--#ifdef XP_MACOSX
-+#if defined(XP_MACOSX) || defined(MOZ_WIDGET_GTK)
- #  include "mozilla/widget/NativeMenuSupport.h"
- #  define USE_NATIVE_MENUS
- #endif
 --- a/widget/gtk/NativeMenuSupport.cpp
 +++ b/widget/gtk/NativeMenuSupport.cpp
-@@ -7,6 +7,8 @@
- 
+@@ -39,6 +39,8 @@
+ #include "mozilla/StaticPrefs_widget.h"
  #include "MainThreadUtils.h"
  #include "NativeMenuGtk.h"
 +#include "nsINativeMenuService.h"
 +#include "nsServiceManagerUtils.h"
+ #include "DBusMenu.h"
+ #include "nsWindow.h"
  
- namespace mozilla::widget {
- 
-@@ -14,7 +16,14 @@ void NativeMenuSupport::CreateNativeMenu
-                                             dom::Element* aMenuBarElement) {
+@@ -49,6 +51,14 @@
    MOZ_RELEASE_ASSERT(NS_IsMainThread(),
                       "Attempting to create native menu bar on wrong thread!");
--  // TODO
-+
+ 
 +  nsCOMPtr<nsINativeMenuService> nms =
 +      do_GetService("@mozilla.org/widget/nativemenuservice;1");
 +  if (!nms) {
@@ -5156,9 +5143,10 @@
 +  }
 +
 +  nms->CreateNativeMenuBar(aParent, aMenuBarElement);
- }
- 
- already_AddRefed<NativeMenu> NativeMenuSupport::CreateNativeContextMenu(
++
+ #ifdef MOZ_ENABLE_DBUS
+   if (aMenuBarElement && StaticPrefs::widget_gtk_global_menu_enabled() &&
+       DBusMenuFunctions::Init()) {
 --- /dev/null
 +++ b/widget/gtk/NativeMenuSupport.h
 @@ -0,0 +1,31 @@
